@@ -14,4 +14,23 @@ mvn clean compile package
 fails: bees app:deploy target/mathematics.war - fmtmac2/mathematics
 goto: cloudbees site, then hit Apps, Mathematics, upload WAR file, select target/mathematics.war
 
+for heroku:
+git init
+git add pom.xml README.txt src/
+git status
+git remote add origin https://github.com/ftaylor92/mathematics.git
+git push -u origin master
+git pull
+heroku create
+heroku apps:rename <app-name>
+git push heroku master
+mvn clean compile package
+ 
+heroku config
+vi system.properties
+git add system.properties 
+git commit -m "system.properties"
+git push heroku master
+heroku ps:scale web=1
+heroku open
 

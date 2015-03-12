@@ -14,7 +14,7 @@
 	$(document).ready(function() {
 		$.ajaxSetup({ cache: false, contentType: "application/json; charset=utf-8", dataType:"json"});
 
-		var counterUrl="http://bookmarks.fmtmac.cloudbees.net/rest/counter?site="+ encodeURIComponent(window.location.href);
+		var counterUrl="https://fmt-bookmarks.herokuapp.com/rest/counter?site="+ encodeURIComponent(window.location.href);
 		$.get(counterUrl, function(data, txtstatus, xbr) {
 			$("#counter").html("<br/><br/><small><em>count: "+ data+"</em></small>");
 		});

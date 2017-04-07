@@ -1,4 +1,6 @@
-svn co --username=ftaylor92 https://svn-fmtmac.forge.cloudbees.com/mathematics/
+see ProcFile to start locally
+http://localhost:8080/
+http://localhost:8080/euclid.jsp
 
 URLs:
 http://mathematics.fmtmac.cloudbees.net/pointMath.jsp
